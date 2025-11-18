@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "react-datepicker/dist/react-datepicker.css";
+
+/* Custom variables and smoothing (OK!) */
+.rich-input, .theme-admin-datepicker input {
+  @apply w-full px-4 py-3 rounded-lg bg-white/15 border-2 border-purple-600 
+  hover:border-blue-400 focus:border-blue-500 shadow-md text-white placeholder-purple-300 
+  text-sm font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 transition;
+  background: linear-gradient(105deg,rgba(139,92,246,.09),rgba(59,130,246,.11),rgba(168,85,247,.13));
+}
+
+/* Enhance react-datepicker (calendar) popup further */
+.theme-admin-datepicker .react-datepicker__today-button {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4 85%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.85em;
+  font-size: 1.05em;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  box-shadow: 0 3px 15px 0 #38bdf891;
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  transition: background .2s, box-shadow .2s, color .2s;
+}
+.theme-admin-datepicker .react-datepicker__today-button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+  color: #fbbf24;
+  box-shadow: 0 6px 24px 0 #38bdf891;
+}
+
+.theme-admin-datepicker .react-datepicker__day--today {
+  background: linear-gradient(90deg, #2563eb 65%, #3b82f6 100%) !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 0 0 2px #3b82f6c9;
+  font-weight: 700;
+}
+.theme-admin-datepicker {
+  background: linear-gradient(130deg, #240060 0%, #3f3cbb 40%, #111132 100%);
+  color: #f3f4f6;
+  border-radius: 1.4rem;
+  border: 2px solid #6366f1;
+  box-shadow: 0 6px 54px 8px #6366f199;
+  padding: 18px 22px 22px 18px;
+}
+
+.theme-admin-datepicker .react-datepicker__header {
+  background: transparent;
+  border-bottom: 1px solid #7c3aed;
+  color: #fbbf24;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.02rem;
+  padding-bottom: 12px;
+}
+
+.theme-admin-datepicker .react-datepicker__navigation--next,
+.theme-admin-datepicker .react-datepicker__navigation--previous {
+  top: 18px;
+  background: rgba(68, 80, 180, 0.23);
+  border-radius: 0.8rem;
+}
+.theme-admin-datepicker .react-datepicker__navigation-icon {
+  font-size: 1.4em;
+  color: #fbbf24 !important;
+}
+
+.theme-admin-datepicker .react-datepicker__day,
+.theme-admin-datepicker .react-datepicker__day-name {
+  color: #c4b5fd;
+  font-weight: 700;
+  border-radius: 0.55rem;
+  transition: background .18s, color .18s;
+}
+
+.theme-admin-datepicker .react-datepicker__day--selected,
+.theme-admin-datepicker .react-datepicker__day--keyboard-selected {
+  background: linear-gradient(93deg,#818cf8 0%,#38bdf8 100%) !important;
+  color: #fff !important;
+  font-weight: 800;
+  box-shadow: 0 0 0 2px #818cf891;
+}
+
+.theme-admin-datepicker .react-datepicker__day--today {
+  border: 2px solid #fbbf24;
+  color: #fbbf24;
+}
+
+.theme-admin-datepicker .react-datepicker__day:hover {
+  background: #38bdf891;
+  color: #232323;
+}
+
+.theme-admin-datepicker-popper {
+  border-radius: 1.4rem;
+  box-shadow: 0 12px 48px 12px #4338cba1;
+  z-index: 50;
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  /* REMOVE text color and background-color here! */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+body {
+  margin: 0;
+}
+/* Optional only for classic HTML h1s, not needed for most Tailwind UIs */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* No tag-based styles for button, input, etc. */
